@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/hcdc.jpg'); /* Adjust the path if necessary */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Add transparency to the container */
+    padding: 20px;
+    border-radius: 10px; /* Corrected border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+ 
+    text-align: center; /* Center the text inside the container */
+}
+
+.logo {
+    
+    display: flex;
+    justify-content: center;
+    position:absolute;
+   margin-left: 65px;
+   margin-bottom: 60px;
+}
+
+h2 {
+    margin-top: 80px;
+    color: #333;
+ 
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+input {
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #8b0000; /* Dark red */
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #8c0000; /* Darker red on hover */
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #b85c5c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

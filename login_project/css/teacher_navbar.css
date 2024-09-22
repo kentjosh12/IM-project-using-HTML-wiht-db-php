@@ -1,0 +1,66 @@
+
+    /* CSS styles for the navigation bar */
+    body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/hcdc.jpg'); /* Add your image path here */
+    background-size: cover; /* Ensures the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keeps the image fixed as you scroll */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency to make the container readable */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+
+    margin: 20px auto; /* Centers the container on the page */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(34, 32, 32, 0.226); /* Transparent black background */
+    padding: 10px;
+    height: 40px;
+}
+
+.logo {
+    margin-left: 20px;
+    margin-top: 20px;
+    width: 100px; /* Adjust logo size as needed */
+   
+    margin-right: 20px; /* Space between logos and links */
+
+}
+.logo2{
+    width: 150px; /* Adjust logo size as needed */
+    height: 100px ;
+    margin-right: 20px; /* Space between logos and links */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 15px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+

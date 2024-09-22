@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/logo.jpg"  class="logo">
+        <h2>Create an Account</h2>
+        <form action="register.php" method="post" onsubmit="return validatePassword()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+            </div>
+            <div class="form-group">
+                <p>Select your role:</p>
+                <div class="role-container">
+                    <button type="button" class="role-button" onclick="setRole('teacher', this)">Teacher</button>
+                    <button type="button" class="role-button" onclick="setRole('student', this)">Student</button>
+                </div>
+            </div>
+            <input type="hidden" id="role" name="role" value=""> <!-- Hidden input to store role -->
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <script>
+        function setRole(role, button) {
+            const buttons = document.querySelectorAll('.role-button');
+            buttons.forEach(btn => {
+                btn.classList.remove('selected-teacher', 'selected-student');
+            });
+
+            document.getElementById('role').value = role;
+
+            if (role === 'teacher') {
+                button.classList.add('selected-teacher');
+            } else {
+                button.classList.add('selected-student');
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
